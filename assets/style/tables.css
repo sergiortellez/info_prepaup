@@ -1,0 +1,108 @@
+/*###################################################*/
+/*...................................................*/
+/* General properties */
+/*...................................................*/
+/*###################################################*/
+
+.up-table thead tr {
+    background-color: var(--red-mono);
+    color: #ffffff;
+    text-align: left;
+    border-radius: 20px 0;
+    -webkit-border-radius: 20px 0;
+    -moz-border-radius: 20px 0;
+    -ms-border-radius: 20px 0;
+    -o-border-radius: 20px 0;
+
+
+}
+
+.up-table th,
+.up-table td {
+    padding: 1rem 1.3rem;
+}
+
+.up-table tbody tr:nth-of-type(even) {
+    background-color: var(--gold-mono);
+    color: #000;
+}
+
+.up-table tbody tr:last-of-type {
+    border-bottom: 5px solid var(--red);
+}
+
+.up-table tbody tr:hover {
+
+    color: var(--red);
+}
+
+/* para que sea sticky la cabecera */
+th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--red-mono);
+}
+
+/*-------------------------------*/
+/* tabla de motivos */
+/*-------------------------------*/
+
+.motivos {
+    width: 100%;
+}
+
+.motivos thead th {
+    background-color: var(--blue-mono);
+    color: #ffffff;
+    text-align: left;
+    border-radius: 20px 0;
+    -webkit-border-radius: 20px 0;
+    -moz-border-radius: 20px 0;
+    -ms-border-radius: 20px 0;
+    -o-border-radius: 20px 0;
+
+
+}
+
+.motivos th {
+    padding: 1rem 1.3rem;
+
+}
+
+.motivos td {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem;
+
+}
+
+.motivos tbody tr {
+    background-color: inherit !important;
+    color: inherit !important;
+
+}
+
+.motivos tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.motivos tbody tr:hover {
+
+    color: var(--red);
+}
+
+.motivoCell {
+    width: 100%;
+}
+
+/*-------------------------------*/
+/* end tabla de motivos */
+/*-------------------------------*/
+
+
+/*###################################################*/
+/*...................................................*/
+/* end General properties */
+/*...................................................*/
+/*###################################################*/

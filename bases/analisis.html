@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="author" content="Desarrollo: Sergio R. Téllez | Prepa UP">
+    <meta name="author" content="Diseño: Sergio R. Téllez">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Información PrepaUP</title>
+    <!-- font awesome General kit -->
+    <script src='https://kit.fontawesome.com/82c271383c.js' crossorigin='anonymous'></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap css.min -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <!-- custom css -->
+    <link rel='stylesheet' href='../assets/style/bases.min.css'>
+    <!-- Google Fonts -->
+    <!-- Google Analytics -->
+
+    <!-- End Google Analytics -->
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+</head>
+
+<body data-spy='scroll' data-target='#nav-funcional'>
+    <!-- add id #nav-funcional to make spy-scroll work -->
+    <!--AOS, animaciones on view-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--fin de AOS, animaciones on view-->
+    <!------------------------------------------------->
+    <!--	navbar	-->
+    <!------------------------------------------------->
+    <nav>
+        <ul>
+            <li id="home">
+                <a href="../portal.html">
+                    <i class="fad fa-grip-horizontal"></i>
+                </a>
+            </li>
+            <li id="document">
+                <a href="https://docs.google.com/spreadsheets/d/1X5WqEAuoT5KeQwYdqMjCIUsOX2Pybrv8OYODEqBiyPw" target="_blank"><i class="fad fa-file-spreadsheet"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!------------------------------------------------->
+    <!--	end navbar	-->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
+    <!--	grid	-->
+    <!------------------------------------------------->
+    <h1 class="titulo"> Análisis por grupo </h1>
+
+    <section>
+        <!------------------------------------------------->
+        <!--	select	-->
+        <!------------------------------------------------->
+        <div class="select">
+            <label for="grupos" style="margin-right: 1rem;">Grupo:</label>
+
+            <select name="grupos" id="grupos" onchange="selectorListener()">
+                <option selected disabled>Grupo</option>
+                <option value="cuartoA">4ºA</option>
+                <option value="cuartoB">4ºB</option>
+                <option value="cuartoC">4ºC</option>
+                <option value="cuartoD">4ºD</option>
+                <option value="cuartoE">4ºE</option>
+                <option value="cuartoF">4ºF</option>
+                <option value="quintoA">5ºA</option>
+                <option value="quintoB">5ºB</option>
+                <option value="quintoC">5ºC</option>
+                <option value="quintoD">5ºD</option>
+                <option value="quintoE">5ºE</option>
+                <option value="quintoF">5ºF</option>
+                <option value="areaA1">A1</option>
+                <option value="areaA2">A2</option>
+                <option value="areaA3">A3</option>
+                <option value="areaA4">A4</option>
+                <option value="areaB1">B1</option>
+                <option value="areaB3">B3</option>
+                <option value="areaC3">C3</option>
+            </select>
+        </div>
+        <!------------------------------------------------->
+        <!--	end select	-->
+        <!------------------------------------------------->
+
+        <!------------------------------------------------->
+        <!--	grupos	-->
+        <!------------------------------------------------->
+        <!--	*** 4a ***	-->
+        <div id="cuartoA" class="groupStats">
+            <span>Coordinador: </span>
+            <p class="coordinador" id="coord"></p>
+            <div class="grid-grupo">
+                <!-- Título -->
+                <div class="titulo-grid-grupo">Promedio por periodo</div>
+                <!-- Periodos -->
+                <div class="periodo">1º periodo</div>
+                <div class="periodo">2º periodo</div>
+                <div class="periodo">3º periodo</div>
+                <div class="periodo">4º periodo</div>
+                <div class="periodo">5º periodo</div>
+                <!-- Promedios -->
+                <div class="datos" id="promedio-primero"></div>
+                <div class="datos" id="promedio-segundo"></div>
+                <div class="datos" id="promedio-tercero"></div>
+                <div class="datos" id="promedio-cuarto"></div>
+                <div class="datos" id="promedio-quinto"></div>
+                <!-- Gráfica promedios -->
+                <div class="graph" id="promediosGraph"></div>
+                <!-- título 2 -->
+                <div class="titulo-grid-grupo">Número de reprobadas por periodo</div>
+                <!-- Periodos -->
+                <div class="periodo">1º periodo</div>
+                <div class="periodo">2º periodo</div>
+                <div class="periodo">3º periodo</div>
+                <div class="periodo">4º periodo</div>
+                <div class="periodo">5º periodo</div>
+                <!-- reprobadas -->
+                <div class="datos" id="reprobadas-primero"></div>
+                <div class="datos" id="reprobadas-segundo"></div>
+                <div class="datos" id="reprobadas-tercero"></div>
+                <div class="datos" id="reprobadas-cuarto"></div>
+                <div class="datos" id="reprobadas-quinto"></div>
+                <!-- Gráfica reprobadas -->
+                <div class="graph" id="reprobadasGraph"></div>
+
+            </div>
+        </div>
+        <!--	*** end 4a ***	-->
+        <!------------------------------------------------->
+        <!--	end grupos	-->
+        <!------------------------------------------------->
+
+    </section>
+
+
+
+    <!------------------------------------------------->
+    <!--	end grid	-->
+    <!------------------------------------------------->
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then google charts-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
+    </script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'>
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- custom -->
+    <script src="../assets/js/charts_and_data_grupo.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="author" content="Desarrollo: Sergio R. Téllez | Prepa UP">
+    <meta name="author" content="Diseño: Sergio R. Téllez">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Información | PrepaUP</title>
+    <!-- font awesome General kit -->
+    <script src="https://kit.fontawesome.com/3a7fd733e8.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel='stylesheet' href='assets/style/style.min.css'>
+    <!-- Google Fonts -->
+    <!-- Google Analytics -->
+    <!-- End Google Analytics -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Google oAuth -->
+    <meta name="google-signin-client_id" content="154956464393-mr1aq9b1sh7qq6vt99q8rfsv4e6pt4tb.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body data-spy='scroll' data-target='#nav-funcional'>
+    <!-- add id #nav-funcional to make spy-scroll work -->
+    <!--AOS, animaciones on view-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--fin de AOS, animaciones on view-->
+    <!------------------------------------------------->
+    <!--	nav	-->
+    <!------------------------------------------------->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a class="nav-link" onclick="filterSelection('all')">
+                    <img class="link-text logo-text" src="assets/images/prepa-claro.png">
+                    <span class='fad fa-chevron-double-right'></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('coordinacion')">
+                    <span class='fad fa-cogs'></span>
+                    <span class="link-text">Coordinación General</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('academica')">
+                    <i class="fad fa-chalkboard-teacher"></i>
+                    <span class="link-text">Secretaría Académica</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('comunicacion')">
+                    <i class="fad fa-keynote"></i>
+                    <span class="link-text">Comunicación</span>
+                </a>
+            </li>
+            <li class="nav-item" id="administracion-menu">
+                <a class="nav-link btn" onclick="filterSelection('administracion')">
+                    <i class="fad fa-search-dollar"></i>
+                    <span class="link-text">Administración</span>
+                </a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('alumni')">
+                    <i class="fad fa-graduation-cap"></i>
+                    <span class="link-text">Alumni</span>
+                </a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('extraescolares')">
+                    <i class="fad fa-guitar"></i>
+                    <span class="link-text">Extraescolares</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('admisiones')">
+                    <i class="fad fa-sign-in-alt"></i>
+                    <span class="link-text">Admisiones</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link btn" onclick="filterSelection('formacion')">
+                    <i class="fad fa-bible"></i>
+                    <span class="link-text">Formación</span>
+                </a>
+            </li>
+
+            <!-- Last -->
+            <li class="nav-item">
+                <a href="https://docs.google.com/spreadsheets/d/1X5WqEAuoT5KeQwYdqMjCIUsOX2Pybrv8OYODEqBiyPw" class="nav-link" target="_blank">
+                    <i class="fad fa-table"></i>
+                    <span class="link-text">Maestra</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!------------------------------------------------->
+    <!--	end nav	-->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
+    <!--	main	-->
+    <!------------------------------------------------->
+    <main>
+        <!--	*** login ***	-->
+        <div id="googleId">
+            <img id="escudo-up" src="assets/images/escudo-up-blanco.png" alt="EscudoUP">
+            <img src="" id="photoUser" alt="ProfilePicture" onError="this.onerror=null;this.src='assets/images/user.png';">
+            <p id="mail"></p>
+
+            <div id="profile">
+                <a href="#" onclick="signOut();"><i class="fad fa-sign-out"></i></a>
+            </div>
+        </div>
+        </div>
+        <!--	*** end login ***	-->
+
+        <!--	*** coordinación general ***	-->
+        <div id="coordinacion" class="filterDiv coordinacion">
+            <div class="titulo">Coordinación General <i class="fad fa-cogs"></i></div>
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=1O52LRb47IJX2g09R6hmEvPgxR8DiGFne#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+
+
+            <div id="alumnos-inscritos" class="numero">
+                <div><span class='fad fa-user '></span><span> <span class='fad fa-arrow-alt-circle-down'></span></span>Inscritos</span> <span id="inscritosNum" class="dato-med"></span></div>
+                <div class="divisor">|</div>
+                <div><span class='fad fa-user '></span><span> <span class='fad fa-arrow-alt-circle-down'></span></span>Bajas</span> <span id="bajasNum" class="dato-med"></span></div>
+            </div>
+            <a id="avisos-academicos" class="base" href="bases/avisos_academicos.html">
+                <i class="fad fa-books"></i>
+                <span>Avisos académicos</span>
+            </a>
+            <div id="numero-avisos-academicos-primero" class="numero">
+                <span id="primAvisoAcNum" class="dato"></span>
+                <span>1º Aviso Académico</span>
+            </div>
+            <div id="numero-avisos-academicos-segundo" class="numero">
+                <span id="segAvisoAcNum" class="dato"></span>
+                <span>2º Aviso Académico</span>
+            </div>
+            <div id="numero-avisos-academicos-tercero" class="numero">
+                <span id="terAvisoAcNum" class="dato"></span>
+                <span>3º Aviso Académico</span>
+            </div>
+
+            <div id="numero-avisos-academicos-cuarto" class="numero">
+                <span id="cuarAvisoAcNum" class="dato"></span>
+                <span>4º Aviso Académico</span>
+            </div>
+
+            <a id="avisos disciplinarios" class="base" href="bases/avisos_disciplinarios.html">
+                <i class="fad fa-list-ol"></i>
+                <span>Avisos Disciplinares</span>
+            </a>
+
+            <div id="primer-aviso-disciplinario" class="numero">
+                <span id="primAvisoDicNum" class="dato"></span>
+                <span> 1º Aviso disciplinario</span>
+            </div>
+
+            <div id="segundo-aviso-disciplinario" class="numero">
+                <span id="segAvisoDicNum" class="dato"></span>
+                <span> 2º Aviso disciplinario</span>
+            </div>
+            <div id="primer-aviso-disciplinario" class="numero">
+                <span id="terAvisoDicNum" class="dato"></span>
+                <span> 3º Aviso disciplinario</span>
+            </div>
+
+            <div id="grafica-avisos-academicos"></div>
+            <div id="grafica-avisos-disciplinares"></div>
+
+        </div>
+        <!--	*** end coordinación general ***	-->
+
+        <!--	*** secretaría académica ***	-->
+        <div id="academica" class="filterDiv academica">
+
+            <div class="titulo">Secretaría Académica <i class="fad fa-chalkboard-teacher"></i></div>
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=1qnw_LPiIP6YvXVHwgIgu436jZibPjZVg#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+            <a id="analisis-grupo" class="base" href="bases/analisis.html">
+                <i class="fad fa-location"></i>
+                <span>Análisis por Grupo</span>
+            </a>
+            <!-- <a id="regularizacion" class="baseSheets" href="#" target="_blank">
+                <i class="fad fa-chalkboard-teacher"></i>
+                <span>Regularización</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a> -->
+            <a id="materias-grado" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1990pEGGWPX6KnoacTdSGvIGjIj5gXXa7LZX3Z7-ldYw" target="_blank">
+                <i class="fad fa-folders"></i>
+                <span>Currícula</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <a id="admisiones-up" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1kAndQHrOqCLvm-lCbQ9PRHdUhA8YytVflK-Mxp-FavY" target="_blank">
+                <i class="fad fa-university"></i>
+                <span>Admisiones UP</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <a id="gac" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1wbHvC80gota4PO-QG-spZoLHR1bJT0pGlBbdGcV8PD0" target="_blank">
+                <i class="fad fa-diploma"></i>
+                <span>GAC</span>
+                <span class='fad fa-table sheetsLogo'></span>
+            </a>
+
+            <a id="capacitaciones" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1Ow2IOGcK-yV-sHQBVl4fFB_mpL8e8fib6VGNVdyIBBA" target="_blank">
+                <i class="fad fa-users-class"></i>
+                <span>Capacitaciones</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <div id="asistenciaCursos" class="numero">
+                <span id="asisitenciaCapNum" class="dato"></span>
+                <span>Asistencia en Capacitación</span>
+            </div>
+
+            <div id="acreditacionCapacitacion" class="numero">
+                <span id="acreditCapNum" class="dato"></span>
+                <span>Acreditación en Capacitación</span>
+            </div>
+
+
+
+            <div id="numReprobadas"></div>
+
+            <div id="numero-posts" class="numero">
+                <span id="gacNum" class="dato"></span>
+                <span>Avance GAC</span>
+            </div>
+
+            <div id="reprobacion" class="numero">
+                <span id="reprobacionNum" class="dato"></span>
+                <span>Reprobacción</span>
+            </div>
+
+        </div>
+        <!--	*** end secretaría académica ***	-->
+        <!--	*** comunicación ***	-->
+        <div id="comunicacion" class="filterDiv comunicacion">
+            <div class="titulo">Comunicación <i class="fad fa-keynote"></i></div>
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=1DAapuoX0qIt3MJVTk-67H-ceGDJ0ODC1#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+            <div id="numero-posts" class="numero">
+                <span id="publicacionesNum" class="dato"></span>
+                <span>Publicaciones</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="publicacionesBar"></div>
+                </div>
+            </div>
+
+            <div id="piechart-servicio"></div>
+
+            <div id="numero-boletin" class="numero">
+                <span id="boletinNum" class="dato"></span>
+                <span>Boletín Pantera</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="boletinBar"></div>
+                </div>
+            </div>
+
+            <div id="numero-eventos-alumn" class="numero">
+                <span id="socAlumnosNum" class="dato"></span>
+                <span>Eventos S. Alumnos</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="socAlumnosBar"></div>
+                </div>
+            </div>
+        </div>
+        <!--	*** end comunicación ***	-->
+
+        <!--	*** administración ***	-->
+        <div id="administracion" class="filterDiv administracion">
+
+            <div class="titulo">Administración <i class="fad fa-search-dollar"></i></div>
+
+
+
+            <div id="ingreso-total" class="numero">
+                <span class="titulo-ingresos-egresos">Ingreso <i class="fas fa-envelope-open-dollar"></i></span>
+                <div class="mb-1 contenedor-real-total">
+                    <div>Real: <span id="ingresosRealNum" class="dato-med"></span></div>
+                    <div>Esperado: <span id="ingresosEsplNum" class=""></span></div>
+                </div>
+                <div class="progress-container">
+                    <span>Dif:</span>
+                    <div id="ingresosBar"></div>
+                </div>
+            </div>
+
+
+
+            <div id="egreso-total" class="numero">
+                <span class="titulo-ingresos-egresos">Egreso <i class="fas fa-envelope-open-dollar"></i></span>
+                <div class="mb-1 contenedor-real-total">
+                    <div>Real: <span id="egresosRealNum" class="dato-med"></span></div>
+                    <div>Esperado: <span id="egresosEsplNum" class=""></span></div>
+                </div>
+                <div class="progress-container">
+                    <span>Dif:</span>
+                    <div id="egresosBar"></div>
+                </div>
+            </div>
+
+            <div id="contibucion-total" class="numero">
+                <span class="titulo-ingresos-egresos">Contribución <i class="fas fa-envelope-open-dollar"></i></span>
+                <div class="mb-1 contenedor-real-total">
+                    <div>Real: <span id="contribucionRealNum" class="dato-med"></span></div>
+                    <div>Esperado: <span id="contribucionEsplNum" class=""></span></div>
+                </div>
+                <div class="progress-container">
+                    <span>Dif:</span>
+                    <div id="contribucionBar"></div>
+                </div>
+            </div>
+
+            <div id="ahorro-total" class="numero">
+                <span class="titulo-ingresos-egresos">Ahorro <i class="fas fa-envelope-open-dollar"></i></span>
+                <div class="mb-1 contenedor-real-total">
+                    <div>Real: <span id="ahorroRealNum" class="dato-med"></span></div>
+                    <div>Esperado: <span id="ahorroEsplNum" class=""></span></div>
+                </div>
+                <div class="progress-container">
+                    <span>Dif:</span>
+                    <div id="ahorroBar"></div>
+                </div>
+            </div>
+
+
+            <div id="piechart-presupuesto">
+            </div>
+
+
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=1wv67RCSqvG-lJB0JgtuZxfhvVqsrnq7D#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+
+            <!-- <a id="cartera-vencida" class="base" href="#">
+                <i class="fad fa-envelope-open-dollar"></i>
+                <span>Cartera Vencida</span>
+            </a> -->
+
+            <a id="gac" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1yPXbOeecd5ogg2mPDDXGimrYQ2gzFO7_hjiDNYPNPFM" target="_blank">
+                <i class="fad fa-hands-helping"></i>
+                <span>Becas</span>
+                <span class='fad fa-table sheetsLogo'></span>
+            </a>
+
+
+
+            <div id="ingresos"></div>
+            <div id="egresos"></div>
+            <div id="contribucion"></div>
+
+            <div id="presupuesto-becas" class="numero">
+                <span id="presupBecasNum" class="dato"></span>
+                <span>Presupuesto Becas Ejercido</span>
+            </div>
+
+            <div id="alumnos-beca" class="numero">
+                <span id="alumnosBecasNum" class="dato"></span>
+                <span># Alumnos con Beca</span>
+            </div>
+
+            <div id="becas-repartidas" class="numero">
+                <span id="repartidasBecasNum" class="dato"></span>
+                <span># Becas Repartidas</span>
+            </div>
+
+            <div id="alumnos-solicitantes" class="numero">
+                <span id="solicitantesBecasNum" class="dato"></span>
+                <span># Alumnos solicitantes</span>
+            </div>
+        </div>
+        <!--	*** end administración ***	-->
+
+        <!--	*** alumni ***	-->
+        <!-- <div id="alumni" class="filterDiv alumni">
+            <div class="titulo">Alumni <i class="fad fa-graduation-cap"></i> </div>
+
+
+            <a id="listas-correo" class="base" href="#">
+                <i class="fad fa-user-graduate"></i>
+                <span>ex alumnos</span>
+            </a>
+
+            <div id="numero-posts" class="numero">
+                <span id="dato-posts" class="dato">200</span>
+                <span>Alumnis involucrados</span>
+            </div>
+        </div> -->
+        <!--	*** end alumni ***	-->
+
+        <!--	*** extraescolares ***	-->
+        <div id="extraescolares" class="filterDiv extraescolares">
+            <div class="titulo">Extraescolares <i class="fad fa-guitar"></i> </div>
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=15xSjsmAhC46-Mj5ULe9Ahw_90ATwwrK2#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+
+
+            <div id="sesiones-comité" class="numero">
+                <span id="comiteNum" class="dato"></span>
+                <span>Sesiones del comité</span>
+            </div>
+
+            <div id="curso-padres" class="numero">
+                <span id="cursosNum" class="dato"></span>
+                <span>Cursos a Padres de familia</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="cursosBar"></div>
+                </div>
+            </div>
+
+
+            <div id="asistencia-padres" class="numero">
+                <span id="asistenciaCursosNum" class="dato"></span>
+                <span>Asistencia Padres de familia</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="asistenciaCursosBar"></div>
+                </div>
+            </div>
+
+            <div id="citas-psicologo" class="numero">
+                <span id="citasPsiqNum" class="dato"></span>
+                <span>Citas Psicólogo</span>
+            </div>
+
+            <div id="porcentaje-selecccion" class="numero">
+                <span id="alumnosSelecNum" class="dato"></span>
+                <span>Alumnos en Selecciones</span>
+            </div>
+            <div id="conferenicas-padres" class="numero">
+                <span id="conferenciasNum" class="dato"></span>
+                <span>Conferencias</span>
+            </div>
+
+
+        </div>
+        <!--	*** end extraescolares ***	-->
+
+        <!--	*** admisiones ***	-->
+        <div id="admisiones" class="filterDiv admisiones">
+            <div class="titulo">Admisiones <i class="fad fa-sign-in-alt"></i> </div>
+            <!-- indicadores -->
+            <button class="indicador">
+                <i class="fad fa-clipboard-list-check"></i>
+                <span>Indicadores</span>
+            </button>
+            <iframe class="panel" src="https://drive.google.com/embeddedfolderview?id=14SYAL-vIXpSn1amNVAODZp4XXeZbsO2l#grid" scrolling="no"></iframe>
+            <!-- end indicadores -->
+
+            <a id="primer-contacto" class="baseSheets" href="https://docs.google.com/spreadsheets/d/1H8YQjY_k0L9rbXwPjFG5Gj2YkSTrLKTToC3lzBACFnc" target="_blank">
+                <i class="fad fa-phone-rotary"></i>
+                <span>Primer Contacto</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+            <div id="meta-inscritos" class="numero">
+                <span id="inscritosNuevosNum" class="dato"></span>
+                <span>Inscritos </span>
+                <div class="progress-container">
+                    <span>vs Aceptados:</span>
+                    <div id="inscritosNuevosBar"></div>
+                </div>
+            </div>
+            <a class="baseSheets" href="https://docs.google.com/spreadsheets/d/1kD1WEBlX9K--RVl9Si51ZUwY20YgachOK9ts1zwOnZs" target="_blank">
+                <i class="fad fa-project-diagram"></i>
+                <span>Promoción Modelo</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <a class="baseSheets" href="https://docs.google.com/spreadsheets/d/17EIxF3DmLB_ZW86oXMDE7Pp3w2kyrzBLpsxBwiy8EgM" target="_blank">
+                <i class="fad fa-glass-cheers"></i>
+                <span>Eventos Realizados</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <a class="baseSheets" href="https://docs.google.com/spreadsheets/d/1-wV6ZvpaFMfgdNxq3kif-Y_qQ9MpDktFIXLRjlpycrE" target="_blank">
+                <i class="fad fa-school"></i>
+                <span>Visitas a colegios</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <div class="numero">
+                <span id="inscritosVespNum" class="dato"></span>
+                <span>Inscritos Vesspertina</span>
+            </div>
+
+            <div class="numero">
+                <span id="prospectosAtendidosNum" class="dato"></span>
+                <span>Prospectos Atendidos</span>
+            </div>
+
+            <div class="numero">
+                <span id="potencialVivosNum" class="dato"></span>
+                <span>Potencial de alumnos vivos</span>
+            </div>
+
+            <div class="numero">
+                <span id="aceptadosNum" class="dato"> </span>
+                <span>Aceptados</span>
+            </div>
+
+            <div class="numero">
+                <span id="colegiosVisitadosNum" class="dato"></span>
+                <span>Colegios Visitados</span>
+            </div>
+            <div class="numero">
+                <span id="contactosLogradosNum" class="dato"></span>
+                <span>Contactos logrados</span>
+            </div>
+            <div class="numero">
+                <span id="eventosRealizadosNum" class="dato"></span>
+                <span>Eventos Realizados</span>
+            </div>
+
+            <div id="alcance" class="numero">
+
+                <div class="tooltipTriggerContainer">
+                    <button title="ayuda" class="tooltipTrigger">
+                        <div class='fad fa-question-circle tooltipTrigger'></div>
+                        <span class="tooltiptext">
+                            El alcance se refiere al número de usuarios (público) que generaron las publicaciones de la Preparatoria en
+                            redes sociales.</span>
+                    </button>
+                </div>
+                <span id="alcanceNum" class="dato"></span>
+                <span>Alcance <span class='fad fa-laptop'></span> </span>
+            </div>
+            <div id="engagement" class="numero">
+                <div class="tooltipTriggerContainer">
+                    <button title="ayuda" class="tooltipTrigger">
+                        <div class='fad fa-question-circle tooltipTrigger'></div>
+                        <span class="tooltiptext">
+                            Engagement se refiere a la participación de potenciales clientes con las publicaciones de la preparatoria.
+                            ¿Cuántos usuarios interactuaron de alguna manera con las publicaciones?
+                            Número de personas que dejan sus datos mostrando interés en nuestra preparatoria.
+                        </span>
+                    </button>
+                </div>
+                <span id="engagementNum" class="dato"></span>
+                <span>Engagement <span class='fad fa-laptop'></span></span>
+            </div>
+            <div id="exito" class="numero">
+                <div class="tooltipTriggerContainer">
+                    <button title="ayuda" class="tooltipTrigger">
+                        <div class='fad fa-question-circle tooltipTrigger'></div>
+                        <span class="tooltiptext">
+                            El porcentaje de éxito se calcula comparando el engagement con los inscritos que sabemos que se obtuvieron a través de redes sociales o medios digitales.
+                        </span>
+                    </button>
+                </div>
+                <span id="exitoNum" class="dato"></span>
+                <span>Porcentaje de éxito <span class='fad fa-laptop'></span></span>
+            </div>
+
+        </div>
+        <!--	*** end admisiones ***	-->
+
+        <!--	*** formación ***	-->
+        <div id="formacion" class="filterDiv formacion">
+            <div class="titulo">Formación <i class="fad fa-bible"></i> </div>
+
+
+            <a id="primer-contacto" class="baseSheets" href="https://docs.google.com/spreadsheets/d/124TTeowpqtNbHVI8OyoaX9oT_5HneeSsRjMsTksjhWw" target="_blank">
+                <i class="fad fa-search-plus"></i>
+                <span>Reporte de Asesorías</span>
+                <span class='fad fa-table  sheetsLogo'></span>
+            </a>
+
+            <div id="numero-posts" class="numero">
+                <span id="asesoriasNum" class="dato"></span>
+                <span>Asesorías</span>
+                <div class="progress-container">
+                    <span>Meta:</span>
+                    <div id="asesoriasBar"></div>
+                </div>
+            </div>
+
+            <div id="numero-posts" class="numero">
+                <span id="platicasSacerdoteNum" class="dato"></span>
+                <span>Pláticas Sacerdote </span>
+            </div>
+
+            <div id="bars-asesorias">
+            </div>
+
+
+        </div>
+        <!--	*** end formación ***	-->
+
+    </main>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!------------------------------------------------->
+    <!--	end main	-->
+    <!------------------------------------------------->
+
+    <!-- jQuery first, then Popper.js,  Bootstrap JS, then google charts-->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- custom -->
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/indicadores.min.js"></script>
+</body>
+
+</html>

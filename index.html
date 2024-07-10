@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="author" content="Desarrollo: Sergio R. Téllez | Prepa UP">
+    <meta name="author" content="Diseño: Sergio R. Téllez">
+    <title>Información | PrepaUP</title>
+    <!-- font awesome General kit -->
+    <script src="https://kit.fontawesome.com/3a7fd733e8.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel='stylesheet' href='assets/style/login.min.css'>
+    <!-- Google Fonts -->
+    <!-- Google Analytics -->
+    <!-- End Google Analytics -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Google oAuth -->
+    <meta name="google-signin-client_id" content="154956464393-mr1aq9b1sh7qq6vt99q8rfsv4e6pt4tb.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+    <!-- add id #nav-funcional to make spy-scroll work -->
+    <!--AOS, animaciones on view-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--fin de AOS, animaciones on view-->
+    <main>
+        <section class="portada">
+
+            <img class="logoprepa" src="assets/images/logo_prepa_blanco.svg" alt="prepaUP">
+            <div class="mt-1">Portal de información <i class="fad fa-analytics"></i></div>
+        </section>
+        <section class="login">
+            <div id="error"> No tienes acceso a este portal, si crees que es un error comunícate con David Berriolope o prueba inicicar sesión con <a href="#" onclick="signOut();">otra cuenta</a></div>
+
+            <div class="login-center">
+                <div>Ingresar <i class="fad fa-lock"></i></div>
+                <div class="g-signin2" data-onsuccess="onSignIn" data-width="230" data-height="50" data-longtitle="true"></div>
+            </div>
+
+            <img src="assets/images/escudo-up-blanco.png" alt="EscudoUP">
+        </section>
+    </main>
+
+    <!-- custom -->
+    <script src="assets/js/login.min.js"></script>
+
+</body>
+
+</html>

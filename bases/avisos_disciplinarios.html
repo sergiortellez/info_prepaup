@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="author" content="Desarrollo: Sergio R. Téllez | Prepa UP">
+    <meta name="author" content="Diseño: Sergio R. Téllez">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Información PrepaUP</title>
+    <!-- font awesome General kit -->
+    <script src='https://kit.fontawesome.com/82c271383c.js' crossorigin='anonymous'></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap css.min -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <!-- custom css -->
+    <link rel='stylesheet' href='../assets/style/bases.min.css'>
+    <link rel="stylesheet" href="../assets/style/tables.min.css">
+    <!-- Google Fonts -->
+    <!-- Google Analytics -->
+
+    <!-- End Google Analytics -->
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+
+</head>
+
+<body data-spy='scroll' data-target='#nav-funcional'>
+    <!-- add id #nav-funcional to make spy-scroll work -->
+    <!--AOS, animaciones on view-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--fin de AOS, animaciones on view-->
+    <!------------------------------------------------->
+    <!--	navbar	-->
+    <!------------------------------------------------->
+    <nav>
+        <ul>
+            <li id="home">
+                <a href="../portal.html">
+                    <i class="fad fa-grip-horizontal"></i>
+                </a>
+            </li>
+            <li id="document">
+                <a href="https://docs.google.com/spreadsheets/d/1X5WqEAuoT5KeQwYdqMjCIUsOX2Pybrv8OYODEqBiyPw" target="_blank"><i class="fad fa-file-spreadsheet"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!------------------------------------------------->
+    <!--	end navbar	-->
+    <!------------------------------------------------->
+    <!------------------------------------------------->
+    <!--	grid	-->
+    <!------------------------------------------------->
+    <h1 class="titulo"> Avisos Disciplinarios </h1>
+
+    <section>
+        <!------------------------------------------------->
+        <!--	select	-->
+        <!------------------------------------------------->
+        <div class="select">
+            <select name="grados" id="grados" onchange="selectorListener()">
+                <option selected disabled>Grado</option>
+                <option value="cuarto">Cuarto</option>
+                <option value="quinto">Quinto</option>
+                <option value="sexto">Sexto</option>
+
+            </select>
+        </div>
+        <!------------------------------------------------->
+        <!--	end select	-->
+        <!------------------------------------------------->
+
+        <!------------------------------------------------->
+        <!--	avisos	-->
+        <!------------------------------------------------->
+        <div class="container-table">
+            <table id="avisos-disciplinarios" class="up-table">
+                <thead>
+                    <tr>
+                        <th>Alumno</th>
+                        <th>Grupo</th>
+                        <th>Avisos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Selecciona un grado</td>
+                </tbody>
+            </table>
+        </div>
+        <!------------------------------------------------->
+        <!--	end avisos	-->
+        <!------------------------------------------------->
+
+    </section>
+
+
+
+    <!------------------------------------------------->
+    <!--	end grid	-->
+    <!------------------------------------------------->
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then google charts-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
+    </script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'>
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- custom -->
+    <script src="../assets/js/avisos-disciplinarios.min.js"></script>
+</body>
+
+</html>

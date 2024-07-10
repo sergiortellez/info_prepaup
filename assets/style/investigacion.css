@@ -1,0 +1,301 @@
+/*###################################################*/
+/*...................................................*/
+/* root variables (responsive font size installed)   */
+/*...................................................*/
+/*###################################################*/
+
+:root {
+    /* font-size */
+    --fs-b: 14px;
+    /* variable Colors */
+    --blue: rgb(1, 72, 130);
+    --blue-mono: rgb(34, 101, 156);
+    --red: rgb(212, 29, 33);
+    --red-mono: rgb(233, 85, 87);
+    --green: #007d00;
+    --green-mono: #bfffbf;
+    --gold: rgb(210, 178, 126);
+    --gold-mono: rgb(235, 213, 179);
+    --dark: #101c33;
+    --dark-mono: #2d3f5f;
+}
+
+/* tablet up */
+@media (min-width: 768px) {
+    :root {
+        /* font-size */
+        --fs-b: 16px;
+    }
+}
+
+/* end tablet up */
+
+/* laptop up */
+@media (min-width: 1279px) {
+    :root {
+        /* font-size */
+        --fs-b: 18px;
+    }
+}
+
+/* end laptop up */
+
+/* desktop up */
+@media (min-width: 1300px) {
+    :root {
+        /* font-size */
+        --fs-b: 22px;
+    }
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end root variables                                */
+/*...................................................*/
+/*###################################################*/
+
+
+/*###################################################*/
+/*...................................................*/
+/* general properties                                */
+/*...................................................*/
+/*###################################################*/
+
+html {
+    /* scroll smooth from nav control */
+    scroll-behavior: smooth;
+    /* font size general control using variable */
+    font-size: var(--fs-b);
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+
+}
+
+body {
+    /* scroll spy */
+    overflow-y: scroll;
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end general properties                            */
+/*...................................................*/
+/*###################################################*/
+
+/*###################################################*/
+/*...................................................*/
+/* nav */
+/*...................................................*/
+/*###################################################*/
+
+nav {
+    background-color: var(--dark);
+}
+
+.brand-logo img {
+    width: 5rem;
+    margin-left: 2rem;
+
+}
+
+.nav-title-list {
+    margin-right: 2rem;
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end nav */
+/*...................................................*/
+/*###################################################*/
+
+/*###################################################*/
+/*...................................................*/
+/* grid */
+/*...................................................*/
+/*###################################################*/
+
+.gridCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*###################################################*/
+/*...................................................*/
+/* end grid */
+/*...................................................*/
+/*###################################################*/
+
+/*###################################################*/
+/*...................................................*/
+/* cards */
+/*...................................................*/
+/*###################################################*/
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7rem;
+    background-color: var(--dark-mono);
+}
+
+.card-header img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 2px var(--gold-mono);
+}
+
+.card-details {
+    margin-top: 1.5rem;
+}
+
+.card-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-tags {
+    margin-top: 1rem;
+}
+
+.profesor {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.correo {
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.story {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.academia {
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.academy,
+.email {
+    margin-left: 0.5    rem;
+}
+
+.fa-window-close {
+    color: var(--red-mono);
+}
+
+.btn-flat {
+    background-color: var(--blue-mono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold) !important;
+    font-size: 1rem;
+}
+
+/*
+  color del efecto ola de los botones
+  */
+.waves-effect.waves-dark .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: var(--dark);
+}
+
+
+.btn-flat i {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end cards */
+/*...................................................*/
+/*###################################################*/
+
+/*###################################################*/
+/*...................................................*/
+/* modals trabajos */
+/*...................................................*/
+/*###################################################*/
+.modal-header {
+    margin: 1rem;
+}
+
+.trabajo {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid lightgrey;
+    margin-top: 1rem;
+}
+
+.modal-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+/*###################################################*/
+/*...................................................*/
+/* end modals trabajos */
+/*...................................................*/
+/*###################################################*/
+
+/*###################################################*/
+/*...................................................*/
+/* query */
+/*...................................................*/
+/*###################################################*/
+
+/* tablet portrait up */
+@media (min-width: 768px) {
+    .gridCards {
+
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+        max-width: 1800px;
+
+    }
+}
+
+/* end tablet up */
+
+/* tablet landscape up */
+@media (min-width: 1024.1px) {
+    .gridCards {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .story {
+        font-size: 0.8rem;
+
+    }
+}
+
+/* end tablet up */
+
+/*###################################################*/
+/*...................................................*/
+/* end query */
+/*...................................................*/
+/*###################################################*/
